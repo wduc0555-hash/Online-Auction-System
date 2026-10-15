@@ -1,0 +1,287 @@
+.root {
+    /* Biến màu (looked-up colors): đổi một chỗ, cả app đổi theo */
+    -color-primary: #2563eb;
+    -color-primary-hover: #1d4ed8;
+    -color-primary-pressed: #1e40af;
+    -color-success: #16a34a;
+    -color-danger: #dc2626;
+    -color-warning: #d97706;
+    -color-text: #111827;
+    -color-text-muted: #6b7280;
+    -color-border: #dde2ee;
+    -color-surface: #ffffff;
+    -color-surface-alt: #f4f6fb;
+
+    -fx-font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-text;
+    -fx-background-color: -color-surface;
+}
+
+.label {
+    -fx-text-fill: -color-text;
+}
+
+/* Nút */
+.button {
+    -fx-background-color: -color-surface-alt;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #e8ecf6;
+}
+
+.button:pressed {
+    -fx-background-color: #dde2ee;
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.primary-button {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-padding: 8 24 8 24;
+}
+
+.primary-button:hover {
+    -fx-background-color: -color-primary-hover;
+}
+
+.primary-button:pressed {
+    -fx-background-color: -color-primary-pressed;
+}
+
+.danger-button {
+    -fx-background-color: -color-danger;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+}
+
+/* Ô nhập */
+.text-field,
+.password-field,
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 10 8 10;
+}
+
+.text-field:focused,
+.password-field:focused,
+.text-area:focused {
+    -fx-border-color: -color-primary;
+}
+
+.text-field:disabled,
+.password-field:disabled {
+    -fx-background-color: -color-surface-alt;
+    -fx-opacity: 0.7;
+}
+
+/* Bảng */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -color-surface-alt;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: -color-surface-alt;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-size: 34px;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text-muted;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fafbfe;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #dbeafe;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: -color-text;
+}
+
+.table-cell {
+    -fx-padding: 6 8 6 8;
+}
+
+/* Thông báo dùng chung (setMessage trong controller) */
+.error {
+    -fx-text-fill: -color-danger;
+}
+
+.info {
+    -fx-text-fill: -color-primary;
+}
+
+.success {
+    -fx-text-fill: -color-success;
+}
+
+.warning {
+    -fx-text-fill: -color-warning;
+}
+
+/* Tiêu đề / nhãn phụ dùng chung */
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.section-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text-muted;
+}
+
+/* Huy hiệu trạng thái phiên đấu giá */
+.badge {
+    -fx-padding: 3 12 3 12;
+    -fx-background-radius: 12;
+    -fx-background-color: #e5e7eb;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-open {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1e40af;
+}
+
+.status-running {
+    -fx-background-color: #d1fae5;
+    -fx-text-fill: #065f46;
+}
+
+.status-finished,
+.status-paid {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #374151;
+}
+
+.status-canceled {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #991b1b;
+}
+
+/* ---------- Phần 2: phòng đấu giá ---------- */
+
+.room-header {
+    -fx-background-color: -color-surface-alt;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.side-panel {
+    -fx-background-color: -color-surface-alt;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* Đồng hồ đếm ngược */
+.timer {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+.timer-urgent {
+    -fx-text-fill: -color-danger;
+}
+
+/* Giá hiện tại: nháy xanh khi có bid mới (class price-up được thêm 0,6 giây) */
+.price {
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.price-up {
+    -fx-text-fill: -color-success;
+}
+
+.leader-me {
+    -fx-text-fill: -color-success;
+    -fx-font-weight: bold;
+}
+
+/* Banner kết quả khi phiên kết thúc */
+.result-banner {
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 8;
+    -fx-background-color: #fef3c7;
+    -fx-text-fill: #92400e;
+    -fx-font-weight: bold;
+}
+
+.result-banner .text {
+    -fx-fill: #92400e;
+}
+
+/* Thanh đặt giá phía dưới */
+.bid-bar {
+    -fx-background-color: -color-surface-alt;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Dòng bid của chính mình trong bảng lịch sử */
+.table-row-cell.my-bid {
+    -fx-background-color: #ecfdf5;
+}
+
+/* Biểu đồ lịch sử giá */
+.chart-title {
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-text-muted;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: #eef0f6;
+}
+
+.default-color0.chart-series-line {
+    -fx-stroke: -color-primary;
+    -fx-stroke-width: 2.5px;
+}
+
+.default-color0.chart-line-symbol {
+    -fx-background-color: -color-primary, white;
+}
